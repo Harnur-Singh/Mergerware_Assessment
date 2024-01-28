@@ -1,0 +1,15 @@
+<template name="userDashboard">
+    <button class="toggle-loan-request-form">Toggle Loan Request Form</button>
+    {{#if loanRequestFormVisible}}
+      <!-- Implement loan request form here -->
+    {{/if}}
+    <ul>
+      {{#each loans}}
+        <li>
+          Loan Amount: {{this.amount}}
+          <button class="request-loan">Request Loan</button>
+          <button class="confirm-payment">Confirm Payment</button>
+        </li>
+      {{/each}}
+    </ul>
+  </template>
